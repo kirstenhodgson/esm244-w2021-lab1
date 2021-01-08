@@ -67,3 +67,10 @@ sf_trees_sep <- sf_trees %>%
   separate(species, into = c("spp_scientific", "spp_common"), sep = "::")
 ```
 
+Example: tidyr::unite()
+
+```{r}
+sf_trees_unite <- sf_trees %>% 
+  unite("id_status", tree_id:legal_status, sep = "_cool!_")
+```
+
